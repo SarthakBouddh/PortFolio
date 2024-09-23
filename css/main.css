@@ -1,0 +1,204 @@
+:root {
+    --bg-color: hsla(158, 23%, 18%, 1);
+    --head-color: hsla(160, 52%, 71%, 1);
+    --tag-color: hsla(150, 35%, 78%, 1);
+}
+
+body {
+    background: linear-gradient(174deg, var(--head-color), var(--bg-color), var(--bg-color), var(--head-color));
+    background-size: 150% 200%;
+    animation: gradient 2s ease-in-out infinite;
+    margin: 0;
+    text-align: center;
+    position: relative;
+    scroll-behavior: auto;
+    overflow-x: hidden;
+}
+
+@keyframes gradient {
+  0% {
+  background-position: 100% 50%; /* Start from the right */
+}
+50% {
+  background-position: 0% 50%; /* Move to the left */
+}
+100% {
+  background-position: 100% 50%; /* Return to the right */
+}
+}
+
+.navbar {
+    width: 90%; /* Adjust for mobile */
+    max-width: 400px; /* Max width */
+    height: 40px;
+    border-radius: 200px;
+    margin: 30px auto;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Offset by half its width */
+    background-color: rgba(255, 255, 255, 0.01);
+    backdrop-filter: blur(50px);
+    padding: 1rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+
+.nav-links {
+    margin: 10px 50px 0 0;
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    font-size: 1.3rem;
+    color: var(--tag-color);
+    padding: 0.5rem 0.7rem;
+    border-radius: 20px;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+.nav-links li a:hover {
+    color: var(--tag-color);
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    height: 70vh;
+    margin-bottom: 100px;
+}
+
+.top h1 {
+    color: var(--head-color);
+    font-size: 6rem;
+    margin-top: 200px;
+}
+
+.tag {
+    width: 50%;
+    text-align: center;
+}
+
+.tag p {
+    color: var(--tag-color);
+    font-size: 1.5rem;
+}
+
+.bottom {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+.bottom a {
+    display: inline;
+    padding: 8px 16px;
+}
+
+.bottom a img {
+    width: 50px;
+}
+
+.bottom a img:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+
+.blank1, .blank2 {
+    width: 90%;
+    height: 10px;
+    background-color: var(--head-color);
+    border-radius: 200px;
+    margin: 300px auto 10px auto;
+}
+
+.rights{
+  font-size: 1.5rem;
+  color: var(--tag-color);
+  padding: 30px 32px;
+}
+.blank2{
+  margin-top: 10px;
+}
+.middle {
+    width: 100vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    position: relative;
+    margin-top: 80px;
+}
+
+.p1, .p2, .p3, .p4, .p5, .p6 {
+    width: 90%; /* Adjust for mobile */
+    max-width: 430px; /* Max width */
+    border-radius: 30px;
+    background-color: rgba(255, 255, 255, 0.01);
+    backdrop-filter: blur(50px);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    margin: 20px 20px 20px 20px;
+}
+
+.p1, .p3, .p5 {
+    height: 300px; /* Let height adjust based on content */
+}
+
+.p2, .p4, .p6 {
+    height: 300px; /* Let height adjust based on content */
+}
+
+.P:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.P h2 {
+    text-align: left;
+    font-size: 2rem;
+    margin-top: 5px;
+    margin-left: 30px;
+    color: var(--tag-color);
+    text-decoration: none;
+}
+
+.P p {
+    color: var(--tag-color);
+}
+
+
+.P img{
+   width:100%;
+   height: 30%;
+   border-top-left-radius : 30px;
+   border-top-right-radius: 30px;
+}
+
+.p3 img{
+   height: 10%;
+}
+
+@media (max-width: 768px) {
+    .top h1 {
+        font-size: 4rem; /* Adjust font size for mobile */
+    }
+    .nav-links li a {
+        font-size: 1rem; /* Smaller font size */
+    }
+    .p1, .p2, .p3, .p4, .p5, .p6 {
+        width: 95%; /* Make elements wider on mobile */
+        margin: 10px; /* Less margin for better spacing */
+    }
+}
